@@ -9,11 +9,11 @@ import {
   TouchableWithoutFeedback,
   Dimensions,
   Platform,
-  ViewPropTypes,
   I18nManager,
 } from 'react-native';
 import Ripple from 'react-native-material-ripple';
-import { TextField } from 'react-native-material-textfield';
+import { ViewPropTypes } from "deprecated-react-native-prop-types";
+import { TextField } from 'react-native-material-textfield-new';
 
 import DropdownItem from '../item';
 import styles from './styles';
@@ -133,7 +133,7 @@ export default class Dropdown extends PureComponent {
     disabledItemColor: PropTypes.string,
     baseColor: PropTypes.string,
 
-    itemTextStyle: Text.propTypes.style,
+    //itemTextStyle: Text.propTypes.style,
 
     itemCount: PropTypes.number,
     itemPadding: PropTypes.number,
@@ -509,7 +509,7 @@ export default class Dropdown extends PureComponent {
         labelHeight={dropdownOffset.top - Platform.select({ ios: 1, android: 2 })}
 
         {...props}
-
+        lineWidth={0.8}
         value={title}
         editable={false}
         onChangeText={undefined}
