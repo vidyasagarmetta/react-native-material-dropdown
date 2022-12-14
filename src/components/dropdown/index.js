@@ -509,7 +509,7 @@ export default class Dropdown extends PureComponent {
         labelHeight={dropdownOffset.top - Platform.select({ ios: 1, android: 2 })}
 
         {...props}
-
+        lineWidth={0.8}
         value={title}
         editable={false}
         onChangeText={undefined}
